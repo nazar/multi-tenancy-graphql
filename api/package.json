@@ -24,6 +24,7 @@
     "@babel/eslint-parser": "7.17.0",
     "@swc/core": "1.2.160",
     "eslint": "8.11.0",
+    "eslint-import-resolver-node": "0.3.6",
     "eslint-plugin-import": "2.25.4",
     "source-map-support": "0.5.21",
     "vite": "2.8.6",
