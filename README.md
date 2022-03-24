@@ -8,7 +8,7 @@ The [api](./api) folder contains an express based API that defines two graphql e
 
 ## Client
 
-the [client](/client) folder contains a React application that uses two Apollo Client definitions at the root of each currency module folder that defines which graphql endpoints are used for graphql queries under each module. 
+the [client](./client) folder contains a React application that uses two Apollo Client definitions at the root of each currency module folder that defines which graphql endpoints are used for graphql queries under each module. 
 
 ## Getting started
 
