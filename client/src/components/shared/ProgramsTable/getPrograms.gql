@@ -1,0 +1,6 @@
+{
+  getPrograms {
+    id
+    name
+  }
+}

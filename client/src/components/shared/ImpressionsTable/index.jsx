@@ -6,15 +6,15 @@ import { useQuery } from '@apollo/client';
 import getImpressionsQuery from './getImpressions.gql';
 
 
-export default function NielsenImpressionsTable() {
+export default function ImpressionsTable() {
   const { data: { getImpressions } = {} } = useQuery(getImpressionsQuery);
 
   return (
     <div className="nielsen-impressions-table-component">
       <DataTable value={getImpressions} responsiveLayout="scroll">
-        <Column field="id" header="ID"></Column>
-        <Column field="programId" header="Program ID"></Column>
-        <Column field="impressions" header="Impressions"></Column>
+        <Column field="id" header="ID" />
+        <Column field="programId" header="Program ID" />
+        <Column field="impressions" header="Impressions" />
       </DataTable>
     </div>
   );
