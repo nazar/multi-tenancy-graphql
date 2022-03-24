@@ -1,0 +1,29 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile-dev
+    volumes:
+      - ./api:/app:delegated
+      - /app/node_modules/
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile-dev
+    volumes:
+      - ./client-next:/app:delegated
+      - /app/node_modules/
+    depends_on:
+      - api
+
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+      - client
+    ports:
+      - '4000:4000'

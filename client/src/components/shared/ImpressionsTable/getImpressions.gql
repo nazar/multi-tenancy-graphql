@@ -1,0 +1,7 @@
+{
+  getImpressions {
+    id
+    programId
+    impressions
+  }
+}

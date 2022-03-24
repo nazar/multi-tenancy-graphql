@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "vite"
+    "dev": "concurrently --restart-tries -1 --restart-after 2000 -n vite,sleep vite yarn:sleep",
+    "sleep": "sleep 99999999"
   },
   "dependencies": {
     "@graphql-tools/schema": "8.3.5",
@@ -23,6 +24,7 @@
     "@babel/core": "7.17.8",
     "@babel/eslint-parser": "7.17.0",
     "@swc/core": "1.2.160",
+    "concurrently": "7.0.0",
     "eslint": "8.11.0",
     "eslint-import-resolver-node": "0.3.6",
     "eslint-plugin-import": "2.25.4",

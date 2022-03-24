@@ -1,0 +1,6 @@
+{
+  "logging": {
+    "console": true,
+    "format": "console"
+  }
+}

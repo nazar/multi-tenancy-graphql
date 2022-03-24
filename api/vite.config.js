@@ -5,6 +5,7 @@ import { VitePluginNode } from 'vite-plugin-node';
 
 export default defineConfig({
   server: {
+    host: '0.0.0.0',
     port: 3000
   },
   build: {
@@ -13,7 +14,7 @@ export default defineConfig({
   plugins: [
     ...VitePluginNode({
       adapter: 'express',
-      appPath: './app',
+      appPath: './src',
       exportName: 'viteNodeApp',
       tsCompiler: 'esbuild'
     })
@@ -21,12 +22,12 @@ export default defineConfig({
   resolve: {
     alias: {
       // application aliases
-      middleware: path.resolve(__dirname, './app/middleware'),
-      services: path.resolve(__dirname, './app/services'),
+      middleware: path.resolve(__dirname, './src/middleware'),
+      services: path.resolve(__dirname, './src/services'),
       // the main schema folder
-      schema: path.resolve(__dirname, './app/schema'),
+      schema: path.resolve(__dirname, './src/schema'),
       // currencies
-      currencies: path.resolve(__dirname, './app/currencies')
+      currencies: path.resolve(__dirname, './src/currencies')
     }
   },
   clearScreen: false

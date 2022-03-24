@@ -1,0 +1,7 @@
+.idea
+.git
+.docker-sync
+.gitignore
+.DS_Store
+
+build

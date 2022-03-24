@@ -8,6 +8,7 @@ export const impressionDefs = `
   # types
   
   type Impression {
+    id: ID!
     programId: ID!
     impressions: Int
   }
@@ -26,7 +27,7 @@ export const impressionResolvers = {
 };
 
 const impressions =  [
-  { programId: 1, impressions: 1 },
-  { programId: 2 },
-  { programId: 3, impressions: 2 }
+  { id: 1, programId: 1, impressions: 1 },
+  { id: 2, programId: 2 },
+  { id: 3, programId: 3, impressions: 2 }
 ];

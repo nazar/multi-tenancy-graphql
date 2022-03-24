@@ -68,7 +68,7 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js'],
-        paths: ['./app']
+        paths: ['./src']
       }
     }
   }

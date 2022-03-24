@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ImpressionsTable from './components/ImpressionsTable';
+import ImpressionsTable from 'components/shared/ImpressionsTable';
 
 export default function Nielsen() {
   return (

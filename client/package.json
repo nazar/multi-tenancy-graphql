@@ -4,16 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "vite"
+    "dev": "concurrently --restart-tries -1 --restart-after 2000 -n vite,sleep vite yarn:sleep",
+    "sleep": "sleep 99999999"
   },
   "dependencies": {
     "@apollo/client": "3.5.10",
     "ahooks": "3.1.14",
     "graphql": "16.3.0",
     "primereact": "7.2.1",
-    "react": "18.0.0-rc.3",
-    "react-dom": "18.0.0-rc.3",
-    "react-router-dom": "5.2.0"
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "5.2.0",
+    "react-transition-group": "4.4.2"
   },
   "devDependencies": {
     "@babel/core": "7.17.8",
@@ -21,6 +23,7 @@
     "@babel/preset-react": "7.16.7",
     "@rollup/plugin-graphql": "1.1.0",
     "@vitejs/plugin-react": "1.2.0",
+    "concurrently": "7.0.0",
     "eslint": "8.11.0",
     "eslint-import-resolver-node": "0.3.6",
     "eslint-plugin-import": "2.25.4",

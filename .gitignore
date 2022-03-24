@@ -1,1 +1,4 @@
 .idea
+.docker-sync
+
+*.override*.yml

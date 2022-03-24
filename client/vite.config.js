@@ -19,5 +19,12 @@ export default defineConfig({
       VideoAmp: path.resolve(__dirname, './src/components/VideoAmp')
     }
   },
+  server: {
+    host: '0.0.0.0',
+    hmr: {
+      port: 4000, // mirror the nginx proxy server listen port
+      path: 'vite-hmr'
+    }
+  },
   clearScreen: false
 });
