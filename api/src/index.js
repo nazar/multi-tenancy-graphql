@@ -12,13 +12,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-
 // application middleware
 app.use(logging());
 
 // wire per currency APIs
-server(app);
-
+await server(app);
 
 if (import.meta.env.PROD) {
   app.listen(3000);
